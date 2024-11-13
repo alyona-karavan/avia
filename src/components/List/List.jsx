@@ -1,18 +1,19 @@
 import Ticket from '../Ticket'
-import './List.css'
+
+import styles from './List.module.scss'
 
 const List = () => {
   return (
-    <div className="list">
-      <ul className="tabs">
-        <li className="tab active">Самый дешевый</li>
-        <li className="tab">Самый быстрый</li>
-        <li className="tab">Оптимальный</li>
+    <div className={styles.list}>
+      <ul className={styles.container}>
+        <li className={`${styles.tab} ${styles.active} ${styles.poor}`}>Самый дешевый</li>
+        <li className={`${styles.tab} ${styles.fast}`}>Самый быстрый</li>
+        <li className={`${styles.tab} ${styles.optima}`}>Оптимальный</li>
       </ul>
-      <ul className="tickets">
+      <ul>
         <Ticket />
       </ul>
-      <button className="buttonMore">Показать еще 5 билетов!</button>
+      <button className={styles.buttonMore}>Показать еще 5 билетов!</button>
     </div>
   )
 }

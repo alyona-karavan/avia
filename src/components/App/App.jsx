@@ -1,14 +1,15 @@
 import Filters from '../Filters'
 import List from '../List'
-import './App.css'
+
+import styles from './App.module.scss'
 
 const App = () => {
   return (
     <>
       <header>
-        <img className="logo" src="/assets/images/logo.png" alt="logo" />
+        <img className={styles.logo} src="/assets/images/logo.png" alt="logo" />
       </header>
-      <div className="mainContainer">
+      <div className={styles.container}>
         <Filters />
         <List />
       </div>

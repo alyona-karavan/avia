@@ -1,0 +1,71 @@
+$blue-color: #2196f3;
+$light-blue-color: #dfe5ec;
+$white-color: #ffffff;
+
+@mixin bold {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 0.5;
+}
+
+.list {
+  max-width: 502px;
+
+  & .container {
+    display: flex;
+    background-color: $white-color;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    @include bold();
+
+    & .tab {
+      width: 168px;
+      height: 50px;
+
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: #4a4a4a;
+    }
+
+    & .poor {
+      border: 1px solid $light-blue-color;
+      border-radius: 5px 0 0 5px;
+    }
+
+    & .fast {
+      border-top: 1px solid $light-blue-color;
+      border-bottom: 1px solid $light-blue-color;
+    }
+
+    & .optima {
+      border: 1px solid $light-blue-color;
+      border-radius: 0 5px 5px 0;
+    }
+
+    & .active {
+      background-color: $blue-color;
+      border: 1px solid $blue-color;
+      color: $white-color;
+    }
+  }
+
+  & .buttonMore {
+    width: 100%;
+    height: 50px;
+    background-color: $blue-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 50px;
+
+    color: $white-color;
+    @include bold();
+  }
+}

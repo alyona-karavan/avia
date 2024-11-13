@@ -1,4 +1,4 @@
-import './Filters.css'
+import styles from './Filters.module.scss'
 
 const Filters = () => {
   const filterOptions = [
@@ -10,14 +10,14 @@ const Filters = () => {
   ]
 
   return (
-    <section className="filtersSection">
-      <h2 className="filtersTitle">Количество пересадок</h2>
-      <ul className="filters">
+    <section className={styles.section}>
+      <h2 className={styles.title}>Количество пересадок</h2>
+      <ul>
         {filterOptions.map((option) => (
           <li key={option.id}>
-            <label className="filter">
-              <input className="checkbox" type="checkbox" name={option.value} />
-              <span className="checkmark"></span>
+            <label className={styles.filter}>
+              <input className={styles.checkbox} type="checkbox" name={option.value} />
+              <span className={styles.checkmark}></span>
               {option.label}
             </label>
           </li>

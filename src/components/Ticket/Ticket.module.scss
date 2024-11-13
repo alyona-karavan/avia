@@ -1,0 +1,72 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket {
+  max-height: 184px;
+
+  @include flex-column();
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  & .container {
+    @include flex-between();
+    margin-bottom: 20px;
+
+    & .price {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #2196f3;
+    }
+
+    & .logo {
+      height: 36px;
+      width: auto;
+    }
+  }
+
+  & .firstLine,
+  .secondLine {
+    @include flex-between();
+    gap: 20px;
+
+    & > * {
+      width: 140px;
+    }
+
+    & .route,
+    & .length,
+    & .stops {
+      @include flex-column();
+
+      & .up {
+        color: #a0b0b9;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.5;
+      }
+
+      & .down {
+        color: #4a4a4a;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  & .firstLine {
+    margin-bottom: 10px;
+  }
+}
