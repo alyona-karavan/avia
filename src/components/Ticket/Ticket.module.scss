@@ -20,6 +20,7 @@
 
   & .container {
     @include flex-between();
+    align-items: center;
     margin-bottom: 20px;
 
     & .price {
@@ -38,7 +39,6 @@
   & .firstLine,
   .secondLine {
     @include flex-between();
-    gap: 20px;
 
     & > * {
       width: 140px;
